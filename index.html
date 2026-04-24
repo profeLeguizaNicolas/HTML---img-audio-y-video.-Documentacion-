@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="Imagenes/icono.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML - img, audio y video.</title>
+</head>
+<body>
+   <h1><span class="naranja">HTML</span> - <span class="verde">img</span>, <span class="verde">audio</span> y <span class="verde">video</span>.</h1>
+   <p>
+        Las etiquetas multimedia permiten la incorporación de imágenes, sonido y video en nuestros documentos a través de una serie de etiquetas con atributos específicos. 
+   </p>
+   <h2>Uso de las etiquetas <span class="verde">img</span>, <span class="verde">audio</span> y <span class="verde">video</span>.</h2>
+   <p>
+        En este módulo nos enfocaremos en poner en práctica las etiquetas de imagen, audio y video.
+   </p>
+   <h2>Etiqueta <span class="verde">img</span></h2>
+   <p>
+        Comenzaremos con la etiqueta de imagen <span class="verde">img</span>. Para insertar una imagen en nuestro código <span class="naranja">HTML</span>, utilizamos la siguiente sintaxis:
+   </p>
+<pre><code class="cpp">    &lt;<span class="verde">img</span> <span class="celeste">src</span>=<span class="naranja">"URL_RUTA_de_la_imagen"</span>></code></pre>
+   <p>
+        En este caso, usamos el atributo <span class="celeste">src</span> (Abreviatura de source, que significa "fuente" en inglés), el cual especifica la ubicación o dirrección del archivo de la imagen que queremos mostrar. 
+   </p>
+   <p>
+        El atributo <span class="celeste">src</span> contiene la ruta que indica la ubicación de la imagen que deseamos mostrar en el documento. Esta ruta puede ser relativa o absoluta, de forma similar a como el elemento <code class="gris">&lt;a></code> emplea el atributo <span class="celeste">href</span> para enlazar a otras direcciones.
+   </p>
+   <b>Sintaxis de etiqueta <span class="verde">img</span> en <span class="naranja">HTML</span>:</b><br>
+<pre><code class="cpp">    &lt;<span class="verde">body</span>>
+        &lt;<span class="verde">img</span> <span class="celeste">src</span>=<span class="naranja">" "</span>>&lt;/<span class="verde">img</span>>
+    &lt;/<span class="verde">body</span>></code></pre>
+    <br>
+    <p>
+        Visualmente, no se mostrará ninguna imagen en el documento hasta que proporcionemos una URL externa o una ruta local válida que apunte al archivo de imagen.
+    </p>
+    <p>
+        Para insertar una imagen alojada en un servidor externo, es necesario utilizar el protocolo de transferencia (Como <code class="gris">https://</code>), seguido de <code class="gris">//</code> y el nombre de dominio. Por ejemplo <code class="gris">https://www.google.com</code>, seguido del resto de la ruta que lleva al archivo de imagen.
+    </p>
+    <p>
+        Para insertar una imagen desde nuestro equipo, basta con indicar la ruta donde se encuentra el archivo. Es fundamental asegurarse de que el archivo tenga una extensión de imagen válida, como <code class="gris">.jgp</code>, <code class="gris">.jpeg</code> o <code class="gris">.png</code>.
+    </p>
+    <p>
+        Como por ejemplo, utilizaremos una imagen llamada <i>Paisaje</i> con la extensión <code class="gris">.jpeg</code>.
+    </p>
+    <div class="center">
+        <img src="Imagenes/imagen1.png" alt="">
+    </div>
+    <p>
+        Para que el siguiente ejemplo funcione correctamente, la imagen y el archivo <span class="naranja">HTML</span> deben ubicados en la misma carpeta.
+    </p>
+    <p>
+        En el atributo <span class="celeste">src</span> de la etiqueta <span class="verde">img</span>, debemos escribir el nombre del archivo de imagen, que en este caso es <code class="gris">Paisaje</code>, seguido de su extensión <code class="gris">Paisaje.jpeg</code>
+    </p>
+    <b>Código:</b><br>
+<pre><code class="cpp">    &lt;<span class="verde">body</span>>
+        &lt;<span class="verde">img</span> <span class="celeste">src</span>=<span class="naranja">"Paisaje.jpeg"</span>>
+    &lt;/<span class="verde">body</span>></code></pre>
+    <br>
+    <b>Documentoo <span class="naranja">HTML</span>:</b><br>
+    <div class="center">
+        <img src="Imagenes/imagen2.png" alt="">
+    </div>
+    <p>
+        Si guardamos la imagen <code class="gris">Paisaje</code> dentro de una carpeta, la ruta del archivo cambiará, y en consecuencia, también deberá cambiar el valor del atributo <span class="celeste">src</span>. A continuación, crearemos una nueva carpeta parar almacenar la imagen y luego modificaremos la ruta del atributo <span class="celeste">src</span> apunte correctamente al archivo <code class="gris">Paisaje.jpeg</code>.
+    </p>
+    <div class="center">
+        <img src="Imagenes/imagen3.png" alt="">
+    </div>
+    <br>
+    <b>Codificación <span class="naranja">HTML</span>:</b> <br>
+    <div class="center">
+        <img src="Imagenes/imagen4.png" alt="">
+    </div>
+    <p>
+        Ahora realizaremos un ejemplo para observar qué ocurre con la etiqueta <code class="verde">img</code> cuando no se actualiza correctamente la ruta en el atributo <span class="celeste">src</span>.
+    </p>
+    <p>
+        En el código <span class="naranja">HTML</span>, eliminaremos la parte que hace referencia a la carpeta <code class="gris">imagenes/</code> y dejaremos únicamente <code class="gris">Paisaje.jpeg</code> como valor del atributo <span class="celeste">src</span>.
+    </p>
+    <b>Código:</b>
+<pre><code class="cpp">    &lt;<span class="verde">body</span>
+        &lt;<span class="verde">img</span> <span class="celeste">src</span>=<span class="naranja">"Paisaje.jpeg"</span>>
+    &lt;/<span class="verde">body</span>></code></pre>
+    <b>Documento <span class="naranja">HTML</span></b><br>
+    <div class="center">
+        <img src="Imagenes/imagen5.png" alt="">
+    </div>
+    <p>
+        Cuando aparece un ícono de imagen rota, significa que el navegador intento cargar el archivo especificado en la etiqueta <span class="verde">img</span>, pero no puedo encontrarlo. La solución ideal sería corregir la ruta del archivo en el atributo <span class="celeste">src</span>. Sin embargo, si no es posible modificar la ruta, existe una alternativa útil el atributo <span class="celeste">alt</span>.
+    </p> 
+    <p>
+        El atributo <span class="celeste">alt</span> sirve para propocionar un texto alternativo o uaa descripción de la imagen. Es una buena práctica incluirlo siempre en las etiquetas <span class="verde">img</span>, ya que mejora la accesibilidad y ofrece información útil cuando la imagen no se puede mostrar.
+    </p>
+    <p>
+        En esta caso, añadiremos el atributo <span class="celeste">alt</span> a nuestra etiqueta <span class="verde">img</span> y escribiremos como valor el texto: <code class="gris">Paisaje</code>.
+    </p>
+<pre><code class="cpp">    &lt;<span class="verde">body</span>>
+        &lt;<span class="verde">img</span> <span class="celeste">src</span>=<span class="naranja">"Paisaje.jpeg"</span> <span class="celeste">alt</span>=<span class="naranja">"Paisaje"</span>>
+    &lt;/<span class="verde">body</span>></code></pre>
+    <br>
+    <p>
+        En nuestro documento <span class="naranja">HTML</span>, seguirá apareciendo el icono de una imagen rota, pero visualmente también veremos su descripción que dice <code class="gris">Paisaje</code>.
+    </p>
+    <b>Documento <span class="naranja">HTML</span></b><br>
+    <div class="center">
+        <img src="Imagenes/imagen6.png" alt="">
+    </div>
+    <h2>Etiqueta <span class="verde">audio</span>.</h2>
+    <p>
+        El uso de la etiqueta <span class="verde">audio</span> es muy similar al de la etiqueta <span class="verde">img</span>. Al igual que con las imágenes, se utiliza el atributo <span class="celeste">src</span> para indicar la ruta del archivo de audio, y el atributo <span class="verde">alt</span> puede emplearse para proporcionar un texto descriptivo alternativo (Aunque no es estánder en <span class="verde">audio</span>). Además, en la etiqueta <span class="verde">audio</span> es necesario inclui el atributo <span class="celeste">controls</span> para que el navegador muestre los controles de reproducción, como reproducir, pausar o ajustar el volumen.
+    </p>
+    <p>
+        En <span class="naranja">HTML</span>, la etiqueta <span class="verde">audio</span> no utiliza el atributo <span class="celeste">alt</span>. A diferencia de la etiqueta <span class="verde">img</span>, que sí usa <span class="celeste">alt</span> para mostrar un texto alternativo cuando la imagen no se carga, en el caso de <span class="celeste">audio</span>, el contenido alternativo se coloca entre las etiquetas de apertura y cierre (...)
+    </p>
+    <p>
+        Este contenido se muestra solo si el navegador no admite la reproducción de audio, funcionando como una alternativa para el usuario.
+    </p>
+<pre><code class="cpp">    &lt;<span class="verde">body</span>>
+        &lt;<span class="verde">audio</span> <span class="celeste">src</span>=<span class="naranja">"audio.mp3"</span> <span class="celeste">controls</span>>
+            Tu navegador no soporta la reproducción de audio o no se encontro el audio.
+        &lt;/<span class="verde">audio</span>>
+    &lt;/<span class="verde">body</span>></code></pre>
+    <br>
+    <p>
+        En este caso, si el navegaddor no puede reproducir el audio, se mostrará el texto <code class="gris">Tu navegador no soporta la reproducción de audio</code>.
+    </p>
+    <b>Document <span class="naranja">HTML</span>:</b> <br>
+    <div class="center">
+        <img src="Imagenes/imagen7.png" alt="">
+    </div>
+    <h2>Etiqueta <span class="verde">video</span></h2>
+    <p>
+        La etiqueta <span class="verde">video</span>. Su uso es muy similar al de la etiqueta <span class="verde">audio</span>, pero en este caso incluiremos algunos algunos atributos adicionales que resultan útiles para mejorar la experiencia del usuario.
+    </p>
+<pre><code class="cpp">    &lt;<span class="verde">body</span>>
+        &lt;<span class="verde">video</span> <span class="celeste">src</span>=<span class="naranja">"video.mp4"</span> <span class="celeste">controls</span>>&lt;/<span class="verde">video</span>>
+    &lt;/<span class="verde">body</span>></code></pre>
+    <br>
+    <b>Documento <span class="naranja">HTML</span>:</b><br>
+    <div class="center">
+        <img src="Imagenes/imagen8.png" alt="">
+    </div>
+    <p>
+        Ahora veamos la misma etiqueta, pero sin el atributo <span class="celeste">controls</span>.
+    </p>
+    <b>Código:</b><br>
+<pre><code class="cpp">    &lt;<span class="verde">body</span>>
+        &lt;<span class="verde">video</span> <span class="celeste">src</span>=<span class="naranja">"video.mp4"</span>>
+    &lt;/<span class="verde">body</span>></code></pre>
+    <br>
+    <b>Documento <span class="naranja">HTML</span>:</b><br>
+    <div class="center">
+        <img src="Imagenes/imagen9.png" alt="">
+    </div>
+    <p>
+        Al quitar el atributo <span class="celeste">controls</span>, veremos la primera imagen del video pero no tendremos la opción de controlar la reproducción del mismo
+    </p>
+    <p>
+        <i>El atributo <span class="celeset">alt</span> fue diseñado específicamente para contenido no multimedia, como imágenes, donde se necesita mostrar una descripción alternativa si el archivo no se carga.</i>
+    </p>
+<pre><code class="cpp">    &lt;<span class="verde">body</span>>
+        &lt;<span class="verde">video</span> <span class="celeste">src</span>=<span class="naranja">"ejemplo.mp4"</span> <span class="celeste">controls</span>>
+            Tu navegador no soporta la reporudcción del video o no lo encontro.
+        &lt;/<span class="verde">verde</span>>
+    &lt;/<span class="verde">body</span>></code></pre>
+    <br>
+    <h2>Otros atributos en <span class="verde">video</span>.</h2>
+    <ul>
+        <li>
+            <span class="celeste">autoplay</span> : Inicia la reproducción del video automáticamente al cargar la página.
+        </li>
+        <li>
+            <span class="celeste">loop</span> : Hace que el video se reproduzca nuevamente desde el principio automáticamente después de finalizar.
+        </li>
+        <li>
+            <span class="celeste">muted</span> : Hace que el video se inicie en modo silencioso (Sin sonido) al cargar la página.
+        </li>
+    </ul>
+    <h3>Ícono de pestaña</h3>
+    <p>
+        Ahora aprenderemos cómo añadir un ícono a la pestaña del navegador utilizando la etiqueta <span class="verde">link</span>. Para ello, debemos establecer el atributo <span class="celeste">rel</span> con el valor <code class="gris">shortcut icon</code> y, además, utilizar el atributo <span class="celeste">href</span> para indicar la ruta del archivo de imagen que deseamos usar como ícono.
+    </p>
+    <h3>¿Qué es el <span class="celeste">shortcut icon</span> o <span class="celeste">favicon</span> en <span class="naranja">HTML</span>?</h3>
+    <p>
+        El <span class="celeste">favicon</span> es un pequeño ícono que representa visualmente un sitio WEB. Aparece en la pestaña del navegador, junto al título de la página, y también cuando el sitio se guarda como favorito o marcador. Ayuda a mejorar la identidad visual y la experiencia del usuario.
+    </p>
+    <p>
+        <b>Código:</b>
+    </p>
+<pre><code class="cpp">    &lt;<span class="verde">head</span>>
+        &lt;<span class="verde">link</span> <span class="celeste">rel</span>=<span class="naranja">"shortcut icon"</span> <span class="celeste">href</span>=<span class="naranja">"favicon.ico"</span> <span class="celeste">type</span>=<span class="naranja">"image/x-icon"</span>>
+    &lt;/<span class="verde">head</span>></code></pre>
+    <br>
+    <p>
+        Cuando ingresamos una imagen como icono de pestaña, podemos utilizar cualquier formato de imagen, pero es una buena práctica convertir la imagen a la extensión <code class="gris">.ico</code>. PAra hacer esto, aquí les comparto un sitio web donde pueden realizar esta conversión: 
+    </p>
+    <div class="center">
+        <a href="https://imagen.online-convert.com/es/convertir-a-ico">https://imagen.online-convert.com/es/convertir-a-ico</a>
+    </div>
+    <br>
+    <b>Documento <span class="naranja">HTML</span></b><br>
+    <div class="center">
+        <img src="Imagenes/imagen10.png" alt="">
+    </div>
+    <br>
+    <hr>
+    <br>
+</body> 
+</html>
